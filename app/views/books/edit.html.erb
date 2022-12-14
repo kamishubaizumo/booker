@@ -4,7 +4,7 @@
 
 <%# コメントアウト %>
 <%= form_with model: @book, url: book_path(@book.id),method: :patch do |f| %>
-     <%#メソッド　がパッチ　画面にメソッドがGETメソッド以外だと画面にsh用事表示されない%>
+     <%#メソッド　がパッチ　画面にメソッドがGETメソッド以外だと画面にsh用事されない表示されない%>
 
 <h4>Title</h4>
 <%= f.text_field :title %>
@@ -17,7 +17,7 @@
 
   <% if @book.errors.any? %>
   <%= @book.errors.count %>errors prohibited this book from being saved:
-    <ul>
+    <ul class="error-list">
       <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
       <% end %>

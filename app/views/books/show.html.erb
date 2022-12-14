@@ -1,6 +1,7 @@
 <div class="outside">
 
-<h2>Book was successfully updated...</h2>
+<%#<h2>Book was successfully updated...</h2>%>
+<%= flash[:notice] %>
 
 
 <p><%= @book.title %></p>
@@ -9,7 +10,7 @@
 
 <div class="option">
 
-<ul class=move">
+<ul class="move">
 <li><%= link_to "Edit",edit_book_path(@book.id) %></li>
 <li><%= link_to"Back",books_path %></li>
 </ul>
